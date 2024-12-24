@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/resume.css">
+</head>
+<body dir="rtl">
+    <div id="header">
+        <div> <button id="menu-toggle" aria-label="Toggle menu">☰</button></div>
+         <div >
+             <img id="img" class="logo" src="../image/logo blue.png" alt="Logo" />
+         </div>
+         <div class="login-btn">
+             <div >
+                 <button class="login-btn-emr"><a><h3>ورود کارفرما</h3></a></button>
+               </div>
+             <div>
+                 <button class="login-btn-emp"><a><h3>ورود کارجو</h3></a></button>
+               </div>
+             
+         </div>
+         
+     </div>
+     <br>
+     <div id="wrap">
+         <div id="sidebar" class="hidden">
+             <h2></h2>
+             <ul>
+                 <li><a href="resume.html">رزومه</a></li>
+                 <li><a href="CC.html">آگهی ها</a></li>
+                 <li><a href="#results">نتایج</a></li>
+                 <li><a href="CC.html">خروج</a></li>
+             </ul>
+         </div>
+        
+     </div>
+    <br><br><br><br>
+    <div class="container">
+        <h1>فرم رزومه</h1>
+    
+        <div class="section">
+            <label for="profileImage">بارگزاری تصویر پروفایل:</label>
+            <input type="file" id="profileImage" accept="image/*">
+        </div>
+    
+        <div class="section name-surname">
+            <div class="name-field">
+                <label for="name">نام:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="surname-field">
+                <label for="surname">نام خانوادگی:</label>
+                <input type="text" id="surname" required>
+            </div>
+        </div>
+    
+        <div class="section email-phone">
+            <div class="email-field">
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="phone-field">
+                <label for="phone">شماره تماس:</label>
+                <input type="text" id="phone">
+            </div>
+        </div>
+    
+        <div class="section">
+            <label for="education">تحصیلات:</label>
+            <select id="education">
+                <option value="" disabled selected>انتخاب کنید</option>
+                <option value="diploma">دیپلم</option>
+                <option value="associate">کاردانی</option>
+                <option value="bachelor">کارشناسی</option>
+                <option value="master">کارشناسی ارشد</option>
+                <option value="doctorate">دکتری</option>
+                <option value="other">سایر</option>
+            </select>
+        </div>
+    
+        <div class="section">
+            <label for="experience">سابقه کاری:</label>
+            <input type="text" id="experience">
+        </div>
+    
+        <div class="section">
+            <label for="projects">پروژه‌ها:</label>
+            <input type="text" id="projects" class="scrollable-input">
+        </div>
+    
+        <div class="section">
+            <label for="skills">مهارت‌ها:</label>
+            <input type="text" id="skills" class="scrollable-input">
+        </div>
+    
+        <div class="download-section">
+            <button id="downloadLink">دانلود رزومه</button>
+        </div>
+    </div>
+
+    
+    <div id="footer">
+        <h2></h2>
+    </div>
+    
+<script src="../js/CC.js"></script> 
+</body>
+</html>
