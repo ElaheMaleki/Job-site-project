@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../styles/result.css"></head>
+<body dir="rtl">
+    <div id="header">
+        <div> <button id="menu-toggle" aria-label="Toggle menu">☰</button></div>
+         <div >
+             <img id="img" class="logo" src="../image/logo blue.png" alt="Logo" />
+         </div>
+         <div class="login-btn">
+             <div >
+                 <button class="login-btn-emr"><a><h3>ورود کارفرما</h3></a></button>
+               </div>
+             <div>
+                 <button class="login-btn-emp"><a><h3>ورود کارجو</h3></a></button>
+               </div>
+             
+         </div>
+         
+     </div>
+     <br>
+     <div id="wrap">
+         <div id="sidebar" class="hidden">
+             <h2></h2>
+             <ul>
+                 <li><a href="../html/resume.html">رزومه</a></li>
+                 <li><a href="../html/CC.html">آگهی ها</a></li>
+                 <li><a href="../html/result.html">نتایج</a></li>
+                 <li><a href="../html/CC.html">خروج</a></li>
+             </ul>
+         </div>
+     </div>
+     <!-- Tab links -->
+      <div class="main-content">
+     <div class="dropdown">
+        <button class="dropbtn" id="dropdownButton">همه</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="selectOption('   همه   ')">همه</a>
+            <a href="#" onclick="selectOption('هفته پیش')">هفته پیش</a>
+            <a href="#" onclick="selectOption(' ماه پیش ')"> ماه پیش </a>
+        </div>
+    </div>
+    
+     <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'all')">همه</button>
+        <button class="tablinks" onclick="openCity(event, 'reviwed')">بررسی شده</button>
+        <button class="tablinks" onclick="openCity(event, 'denied')">رد شده</button>
+        <button class="tablinks" onclick="openCity(event, 'interview')">مصاحبه </button>
+
+      </div>
+      
+      <div id="all" class="tabcontent">
+        <div class="job-card">
+            <img src="../image/توانمند.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">تحلیل‌گر داده</h2>
+                <p class="company-name">شرکت توانمند</p>
+                <p class="city">شهر: اصفهان - خیابان رودکی</p>
+                <p class="salary">حقوق پیشنهادی: 30,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+        <div class="job-card">
+            <img src="../image/فرامهام.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">کارشناس دیجیتال مارکتینگ</h2>
+                <p class="company-name">شرکت فرامهام</p>
+                <p class="city">شهر: مشهد - سناباد ۴۴</p>
+                <p class="salary">حقوق پیشنهادی: 22,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+      </div>
+      
+      <div id="reviwed" class="tabcontent">
+        <div class="job-card">
+            <img src="../image/پرسینا.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">برنامه نویس بک اند</h2>
+                <p class="company-name">شرکت پرسینا</p>
+                <p class="city">شهر: تهران - خیابان آیت‌الله کاشانی</p>
+                <p class="salary">حقوق پیشنهادی: 35,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+        <div class="job-card">
+            <img src="../image/رادنت.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">کارشناس BI</h2>
+                <p class="company-name">شرکت بازرگانی رادنت</p>
+                <p class="city">شهر:  تهران - خیابان ستارخان</p>
+                <p class="salary">حقوق پیشنهادی: 22,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+        <div class="job-card">
+            <img src="../image/میهن-رایان.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">کارشناس فروش تلفنی</h2>
+                <p class="company-name">شرکت میهن رایان</p>
+                <p class="city">شهر: اصفهان - مبارکه</p>
+                <p class="salary">حقوق پیشنهادی: 22,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+      </div>
+      
+      <div id="denied" class="tabcontent">
+        <div class="job-card">
+            <img src="../image/پرسینا.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">برنامه نویس بک اند</h2>
+                <p class="company-name">شرکت پرسینا</p>
+                <p class="city">شهر: تهران - خیابان آیت‌الله کاشانی</p>
+                <p class="salary">حقوق پیشنهادی: 35,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+        <div class="job-card">
+            <img src="../image/عصر-نقره-ای.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">کارشناس فروش</h2>
+                <p class="company-name">شرکت بازرگانی عصر نقره ای</p>
+                <p class="city">شهر: مشهد - بلوار سجاد</p>
+                <p class="salary">حقوق پیشنهادی: 22,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+      </div>
+      <div id="interview" class="tabcontent">
+        <div class="job-card">
+            <img src="../image/پرسینا.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">برنامه نویس بک اند</h2>
+                <p class="company-name">شرکت پرسینا</p>
+                <p class="city">شهر: تهران - خیابان آیت‌الله کاشانی</p>
+                <p class="salary">حقوق پیشنهادی: 35,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+        <div class="job-card">
+            <img src="../image/لاک-پشت.webp" alt="لوگوی شرکت" class="company-logo">
+            <div class="job-details">
+                <h2 class="job-title">توسعه دهنده net.</h2>
+                <p class="company-name">شرکت لاک-پشت</p>
+                <p class="city">شهر: اصفهان - هشت‌بهشت غربی</p>
+                <p class="salary">حقوق پیشنهادی: 22,000,000 تومان</p>
+            </div>
+            <div class="button-group">
+                <a href="#" class="related-job-button">مشاغل مرتبط </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script  src="../js/CC.js"></script>
+</body>
+</html>
