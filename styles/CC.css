@@ -112,8 +112,8 @@ h1 {
 
 .job-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو باکس در هر خط */
-    gap: 20px; /* فاصله بین باکس‌ها */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
     
 }
 
@@ -128,14 +128,14 @@ h1 {
 }
 
 .company-logo {
-   width: 80px; /* اندازه لوگو */
-   height: auto; /* حفظ نسبت ابعاد */
-   margin-right: 10px; /* فاصله از متن */
+   width: 80px; 
+   height: auto; 
+   margin-right: 10px; 
    margin-left: 15px;
 }
 
 .job-details {
-   flex-grow: 1; /* اجازه می‌دهد تا فضای باقی‌مانده را اشغال کند */
+   flex-grow: 1; 
 }
 
 .job-title {
@@ -149,7 +149,7 @@ h1 {
 }
 
 .city {
-   color: #888; /* رنگ خاکستری برای آدرس شهر */
+   color: #888; 
 }
 
 .salary {
@@ -157,13 +157,13 @@ h1 {
 }
 
 .button-group {
-   display: flex; /* استفاده از Flexbox برای دکمه‌ها */
-   flex-direction: row; /* چیدمان افقی در حالت دسکتاپ */
-   gap: 10px; /* فاصله بین دکمه‌ها */
-   margin-top: auto; /* تراز دکمه‌ها در پایین کارت */
+   display: flex; 
+   flex-direction: row; 
+   gap: 10px; 
+   margin-top: auto; 
 }
 
-/* استایل دکمه‌ها */
+
 .apply-button,
 .resume-button {
     font-size: 0.75em;
@@ -177,27 +177,27 @@ h1 {
 
 .apply-button:hover,
 .resume-button:hover {
-   background-color: rgb(45,164,164); /* تغییر رنگ دکمه در حالت هاور */
+   background-color: rgb(45,164,164); 
 }
 
-/* استایل ریسپانسیو */
+
 @media (max-width: 600px) {
    .job-list {
-       grid-template-columns: repeat(1, 1fr); /* یک باکس در هر خط در موبایل */
+       grid-template-columns: repeat(1, 1fr); 
    }
    .job-card {
-    flex-direction: column; /* چیدمان عمودی در موبایل */
-    align-items: flex-start; /* تراز به سمت چپ */
+    flex-direction: column; 
+    align-items: flex-start; 
 }
    .button-group {
-       flex-direction: row; /* چیدمان افقی دکمه‌ها در موبایل */
-       gap: 10px; /* فاصله بین دکمه‌ها */
-       margin-top: 10px; /* فاصله بالای دکمه‌ها */
-       justify-content: center; /* تراز به مرکز */
+       flex-direction: row; 
+       gap: 10px; 
+       margin-top: 10px; 
+       justify-content: center; 
    }
 
    .company-logo {
-       margin-bottom: 10px; /* فاصله زیر لوگو */
+       margin-bottom: 10px; 
    }
    
 }
@@ -206,37 +206,37 @@ h1 {
 
 
 .banner {
-   background-image: url('../image/banner1.png'); /* تصویر پس‌زمینه */
-   background-size: cover; /* پوشش کامل */
-   background-position: center; /* مرکز تصویر */
-   height: 850px; /* ارتفاع بنر */
+   background-image: url('../image/banner1.png'); 
+   background-size: cover; 
+   background-position: center; 
+   height: 850px; 
    display: flex;
-   justify-content: center; /* مرکز کردن محتوا افقی */
-   align-items: center; /* مرکز کردن محتوا عمودی */
-   color: #308ba2; /* رنگ متن */
-   text-align: center; /* تراز متن به مرکز */
+   justify-content: center; 
+   align-items: center; 
+   color: #308ba2; 
+   text-align: center; 
    margin-top: -50px;
 }
 
 .banner-content {
    margin-top: -50px; 
-   max-width: 600px; /* حداکثر عرض محتوا */
-   padding: 20px; /* فضای داخلی */
+   max-width: 600px; 
+   padding: 20px; 
    margin-bottom: 120px;
 }
 
 .banner h1 {
-   font-size: 2.8em; /* اندازه عنوان */
-   margin-bottom: 10px; /* فاصله پایین عنوان */
+   font-size: 2.8em; 
+   margin-bottom: 10px; 
 }
 
 .banner p {
-   font-size: 1.5em; /* اندازه متن */
-   margin-bottom: 10px; /* فاصله پایین متن */
+   font-size: 1.5em; 
+   margin-bottom: 10px; 
 }
 
 .tagline {
-   font-size: 1.1em; /* اندازه شعار */
-   color: #f25044; /* رنگ جذاب برای شعار */
-   margin-bottom: 20px; /* فاصله پایین شعار */
+   font-size: 1.1em; 
+   color: #f25044; 
+   margin-bottom: 20px; 
 }
