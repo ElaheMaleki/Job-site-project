@@ -22,6 +22,7 @@ body {
     width: 100%;
     z-index: 1001; 
     padding-left: 15px;
+    overflow-x: hidden;
 }
 
 .login-btn {
@@ -146,6 +147,7 @@ body {
   }
   .tablinks{
     font-family: mainFont;
+    font-size: medium;
   }
 
 
@@ -304,3 +306,5 @@ body {
         margin: 10px; /* حاشیه ۱۰ پیکسل */
     }
 }
+
+

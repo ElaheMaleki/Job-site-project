@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="../styles/CC.css">
 </head>
 <body dir="rtl">
+ 
+
+    <div class="chat-icon" id="chatIcon">
+        <span>💬</span>
+        <div class="chat-tooltip">از کارفرما سوالی دارید؟</div>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h2>چت با کارفرما</h2>
+            <button id="chatCloseButton">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-btm">
+        <input type="text" id="chatMessageInput" placeholder="پیام خود را اینجا تایپ کنید..." />
+        <button class="btn-send-chat" id="chatSendButton">ارسال</button>
+    </div>
+    </div>
+
     <div id="header">
        <div> <button id="menu-toggle" aria-label="Toggle menu">☰</button></div>
         <div >
@@ -24,18 +43,16 @@
         
     </div>
     <br>
-    <div id="wrap">
-        <div id="sidebar" class="hidden">
-            <h2></h2>
-            <ul>
-                <li><a href="resume.html">رزومه</a></li>
-                <li><a href="CC.html">آگهی ها</a></li>
-                <li><a href="result.html">نتایج</a></li>
-                <li><a href="CC.html">خروج</a></li>
-            </ul>
-        </div>
-       
+    <div id="sidebar" class="visible">
+        <ul>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i> <span class="menu-text">رزومه</span></a></li>
+            <li><a href="CC.html"><i class="fas fa-bullhorn"></i> <span class="menu-text">آگهی ها</span></a></li>
+            <li><a href="result.html"><i class="fas fa-trophy"></i> <span class="menu-text">نتایج</span></a></li>
+            <li><a href="CC.html"><i class="fas fa-sign-out-alt"></i> <span class="menu-text">خروج</span></a></li>
+        </ul>
     </div>
+        
+   
     
     <div class="banner">
         <div class="banner-content">
@@ -211,8 +228,28 @@
     </div> 
     
     <div id="footer">
-        <h2></h2>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>تماس با ما</h4>
+                <p>آدرس: تهران، خانی آباد ،دانشگاه دکتر شریعتی</p>
+                <p>شماره تلفن: ۰۹۱۲۸۳۲۱۲۱۲</p>
+            </div>
+            <div class="social-media">
+                <h4>شبکه‌های اجتماعی</h4>
+                <a href="#" target="_blank"><img src="../image/facebook.svg" alt="Facebook" /></a>
+                <a href="#" target="_blank"><img src="../image/twitter.svg" alt="Twitter" /></a>
+                <a href="#" target="_blank"><img src="../image/instagram.svg" alt="Instagram" /></a>
+                <a href="#" target="_blank"><img src="../image/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+            <img class="logofooter" src="../image/logo blue.png">
+        </div>
+        <div class="footer-bottom">
+            <p>© تمامی حقوق شرکت محفوظ است.</p>
+        </div>
+        <div>
+        </div>
     </div>
+    
     
 <script src="../js/CC.js"></script> 
 </body>

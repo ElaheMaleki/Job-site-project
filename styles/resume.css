@@ -8,7 +8,8 @@ body {
     background-color: #f4f4f4;
     font-family: mainFont;
     margin: 0;
-    padding: 20px;
+    overflow-x: hidden;
+
 }
 
 #header {
@@ -196,4 +197,44 @@ button:hover {
        margin-right: 0;
        margin-bottom: 10px; 
     }
+}
+
+#footer {
+    background-color: rgb(57, 204, 203);
+    color: white;
+    padding: 20px;
+    position: relative; /* نسبت به دیگر عناصر */
+    bottom: 0;
+    top: 10px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.contact-info, .social-media {
+    flex: 1; /* هر بخش به یک اندازه گسترش می‌یابد */
+    margin: 0 20px; /* فاصله بین بخش‌ها */
+}
+
+.social-media a {
+    margin-right: 10px; /* فاصله بین آیکون‌ها */
+}
+
+.social-media img {
+    width: 30px; /* اندازه آیکون‌ها */
+    height: auto;
+}
+
+.footer-bottom {
+    text-align: center; /* متن در وسط قرار می‌گیرد */
+    margin-top: 20px; /* فاصله بالای متن */
+}
+.logofooter{
+    width: 150px;
+    height: 100px;
+    margin: 25px;
 }
