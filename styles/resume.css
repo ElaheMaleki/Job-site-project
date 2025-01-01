@@ -238,3 +238,40 @@ button:hover {
     height: 100px;
     margin: 25px;
 }
+.theme-options {
+    display: flex; /* استفاده از فلکس باکس برای نمایش افقی */
+    gap: 20px; /* فاصله بین گزینه‌ها */
+    align-items: center; /* تراز کردن عمودی گزینه‌ها */
+    justify-content: space-between;
+
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column; /* قرار دادن دکمه و تصویر در ستون */
+    align-items: center; /* تراز کردن افقی */
+    cursor: pointer; /* تغییر نشانگر ماوس به دست */
+}
+
+.preview-image {
+    width: 100px; /* عرض تصویر پیش‌نمایش */
+    height: auto; /* حفظ نسبت تصویر */
+    margin-top: 5px; /* فاصله بالای تصویر */
+    border: 2px solid transparent; /* حاشیه ابتدایی بدون رنگ */
+    border-radius: 5px; /* گوشه‌های گرد */
+}
+
+.selected {
+    border-color: blue; /* رنگ حاشیه انتخاب شده */
+}
+@media (max-width: 600px) {
+    .theme-options {
+        flex-direction: column; /* نمایش عمودی در حالت موبایل */
+        align-items: center;         /* وسط‌چین کردن عناصر در محور y */
+
+    }
+
+    .theme-option {
+        margin-bottom: 15px; /* فاصله بین گزینه‌ها در حالت عمودی */
+    }
+}

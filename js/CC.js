@@ -36,14 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// //document.getElementById('downloadLink').addEventListener('click', function() {
-//     const link = document.createElement('a');
-//     link.href = '../resume/sample-filled-resume-fa.pdf'; // مسیر فایل رزومه
-//     link.download = 'sample-filled-resume-fa.pdf'; // نام فایل دانلودی
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-// //});
 
 
 function openCity(evt, cityName) {

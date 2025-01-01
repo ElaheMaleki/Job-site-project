@@ -127,7 +127,7 @@ body {
     cursor: pointer;
 }
 #sidebar {
-    width: 200px;
+    width: 150px;
     background-color: #f4f4f4; /* Light background */
     position: fixed;
     right: -250px; /* Hidden by default */
@@ -341,7 +341,7 @@ h1 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(57,204,203);
+    background-color: rgb(48,139,161);
     color: white;
     border-radius: 50%;
     width: 50px;
@@ -351,6 +351,7 @@ h1 {
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s;
+    z-index: 1002;
 }
 
 .chat-icon:hover {
@@ -381,7 +382,8 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    z-index: 100ss;
+    z-index: 1002;
+
 }
 
 .chat-header {
