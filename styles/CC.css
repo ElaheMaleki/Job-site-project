@@ -453,6 +453,8 @@ h1 {
     bottom: 0;
     top: 10px;
     width: 100%;
+    width: 100%;
+    z-index: 1001; /* افزایش z-index به 1001 */
 }
 
 .footer-content {
