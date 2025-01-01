@@ -9,6 +9,7 @@ body {
     font-family: mainFont;
     margin: 0;
     overflow-x: hidden;
+    
 }
 
 #header {
@@ -28,6 +29,57 @@ body {
     display: flex;
     align-items: start; 
     margin-left: 10px;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+#search-input::placeholder {
+    color: #999;
+}
+
+#search-button {
+    padding: 15px 20px;
+    background-color: #39ccc9; /* Light blue background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #2da4a4; /* Darker blue on hover */
+}
+
+#search-button i {
+    font-size: 1.2em;
 }
 
 .logo {
@@ -73,38 +125,67 @@ body {
     border: none; 
     font-size: 24px; 
     cursor: pointer;
-}#sidebar {
+}
+#sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light background */
     position: fixed;
-    right: -250px;
-    top: 60px;
+    right: -250px; /* Hidden by default */
+    top: 80px;
     height: calc(100% - 60px);
     transition: right 0.3s ease;
-    text-decoration: none;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it appears above other content */
+
 }
 
+#sidebar a {
+    text-decoration: none;
+}
 #sidebar.visible {
     right: 0; 
 }
 
-.hidden {
-    display: none;
+#sidebar ul {
+    list-style: none; /* Remove default list styling */
+    text-decoration: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+#sidebar li {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 15px 20px; /* Add padding for spacing */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+#sidebar li:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+#sidebar img {
+    width: 24px; /* Set a consistent icon size */
+    height: 24px; /* Set a consistent icon size */
+    margin-right: 10px; /* Space between icon and text */
 }
 
 .menu-text {
-    display: inline; /* نمایش متن در حالت عادی */
+    display: inline; /* Show text normally */
+    font-size: 16px; /* Increase font size */
+    color: #333; /* Darker text color */
 }
 
 .sidebar-collapsed .menu-text {
-    display: none; /* مخفی کردن متن در حالت بسته */
+    display: none; /* Hide text when collapsed */
 }
 
 @media (max-width: 768px) {
     #sidebar {
-        right: -250px; /* در موبایل به طور پیش‌فرض مخفی است */
+        right: -250px; /* Hidden by default on mobile */
     }
 }
+
 
 .page-title{
     background-color:rgb(57,204,203) ;
@@ -229,6 +310,7 @@ h1 {
    color: #308ba2; 
    text-align: center; 
    margin-top: -50px;
+   margin: 0%;
 }
 
 .banner-content {
