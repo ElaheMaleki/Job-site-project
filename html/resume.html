@@ -87,14 +87,62 @@
             <input type="text" id="projects" class="scrollable-input">
         </div>
     
+        <!-- <div class="section">
+            <label>انتخاب تم:</label>
+            <div class="theme-options">
+                <div class="theme-option">
+                    <input type="radio" id="theme1" name="theme" value="theme1">
+                    <label for="theme1"> </label>
+                    <img src="../image/theme1-preview.png" alt="پیش‌نمایش تم ۱" class="preview-image">
+                </div>
+                <div class="theme-option">
+                    <input type="radio" id="theme2" name="theme" value="theme2">
+                    <label for="theme2"> </label>
+                    <img src="../image/theme2-preview.png" alt="پیش‌نمایش تم ۲" class="preview-image">
+                </div>
+                <div class="theme-option">
+                    <input type="radio" id="theme3" name="theme" value="theme3">
+                    <label for="theme3"> </label>
+                    <img src="../image/theme3-preview.png" alt="پیش‌نمایش تم ۳" class="preview-image">
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- <div class="download-section">
+            <button id="downloadLink">دانلود رزومه</button>
+        </div> -->
         <div class="section">
-            <label for="skills">مهارت‌ها:</label>
-            <input type="text" id="skills" class="scrollable-input">
+            <label>انتخاب تم:</label>
+            <div class="theme-options">
+                <div class="theme-option" onclick="selectTheme('theme1')">
+                    <img src="../image/theme1-preview.png" alt="پیش‌نمایش تم ۱" class="preview-image" id="theme1">
+                    <label for="theme1">قالب ۱</label>
+                </div>
+                <div class="theme-option" onclick="selectTheme('theme2')">
+                    <img src="../image/theme2-preview.png" alt="پیش‌نمایش تم ۲" class="preview-image" id="theme2">
+                    <label for="theme2">قالب ۲</label>
+                </div>
+                <div class="theme-option" onclick="selectTheme('theme3')">
+                    <img src="../image/theme3-preview.png" alt="پیش‌نمایش تم ۳" class="preview-image" id="theme3">
+                    <label for="theme3">قالب ۳</label>
+                </div>
+            </div>
         </div>
-    
+        
         <div class="download-section">
             <button id="downloadLink">دانلود رزومه</button>
         </div>
+        
+        
+        
+        <script>
+        // کد JavaScript برای دانلود فایل...
+        </script>
+        
+        
+        <!-- <div class="download-section">
+            <button id="downloadLink">دانلود رزومه</button>
+        </div> -->
     </div>
 
     
@@ -120,6 +168,8 @@
         </div>
     </div>
     
+<script src="../js/resume.js">
+</script> 
 <script src="../js/resume.js"></script> 
 </body>
 </html>
