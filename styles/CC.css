@@ -8,7 +8,8 @@ body {
     background-color: #f4f4f4;
     font-family: mainFont;
     margin: 0;
-    padding: 20px;
+    overflow-x: hidden;
+    
 }
 
 #header {
@@ -29,6 +30,7 @@ body {
     align-items: start; 
     margin-left: 10px;
 }
+
 
 .logo {
     width: 110px;
@@ -53,6 +55,7 @@ body {
 
 .login-btn-emp:hover {
     transform: scale(1.05); 
+    background-color:  rgb(45,164,164);
 }
 
 .login-btn-emr {
@@ -62,6 +65,7 @@ body {
 
 .login-btn-emr:hover {
     transform: scale(1.05); 
+    background-color:  rgb(45,164,164);
 }
 
 #wrap {
@@ -74,30 +78,118 @@ body {
     font-size: 24px; 
     cursor: pointer;
 }
-
 #sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
+    width: 150px;
+    background-color: #f4f4f4; /* Light background */
     position: fixed;
-    right: -250px;
-    top: 60px;
+    right: -250px; /* Hidden by default */
+    top: 80px;
     height: calc(100% - 60px);
     transition: right 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it appears above other content */
+
 }
 
+#sidebar a {
+    text-decoration: none;
+}
 #sidebar.visible {
     right: 0; 
 }
 
-.hidden {
-    display: none;
+#sidebar ul {
+    list-style: none; /* Remove default list styling */
+    text-decoration: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
+
+#sidebar li {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 15px 20px; /* Add padding for spacing */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+#sidebar li:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+#sidebar img {
+    width: 24px; /* Set a consistent icon size */
+    height: 24px; /* Set a consistent icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.menu-text {
+    display: inline; /* Show text normally */
+    font-size: 16px; /* Increase font size */
+    color: #333; /* Darker text color */
+}
+
+.sidebar-collapsed .menu-text {
+    display: none; /* Hide text when collapsed */
+}
+
 
 .page-title{
     background-color:rgb(57,204,203) ;
     padding: 10px;
     margin-top: 50px ;
     margin-bottom: 50px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+#search-input::placeholder {
+    color: #999;
+}
+
+#search-button {
+    padding: 15px 20px;
+    background-color: #39ccc9; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #2da4a4; 
+}
+
+#search-button i {
+    font-size: 1.2em;
 }
 
 .container {
@@ -178,6 +270,7 @@ h1 {
 .apply-button:hover,
 .resume-button:hover {
    background-color: rgb(45,164,164); 
+   background-image: url('../image/banner1.png');
 }
 
 
@@ -199,6 +292,9 @@ h1 {
    .company-logo {
        margin-bottom: 10px; 
    }
+   #sidebar {
+    right: -250px; 
+}
    
 }
 
@@ -216,6 +312,7 @@ h1 {
    color: #308ba2; 
    text-align: center; 
    margin-top: -50px;
+   margin: 0%;
 }
 
 .banner-content {
@@ -239,4 +336,156 @@ h1 {
    font-size: 1.1em; 
    color: #f25044; 
    margin-bottom: 20px; 
+}
+
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(48,139,161);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 1002;
+}
+
+.chat-icon:hover {
+    animation: shake 1s; /* افکت لرزش */
+}
+
+.chat-tooltip {
+    position: absolute;
+    bottom: 60px;
+    right: -10px;
+    background-color: rgb(57,204,203);
+    color: rgb(5, 4, 4);
+    padding: 5px;
+    border-radius: 5px;
+    display: none; /* پنهان کردن tooltip */
+}
+
+.chat-icon:hover .chat-tooltip {
+    display: block; /* نمایش tooltip هنگام هاور */
+}
+
+.chat-container {
+    display: none; /* پنهان کردن پنجره چت */
+    width: 400px;
+    position: fixed;
+    bottom: 80px; /* فاصله از پایین */
+    right: 20px; /* فاصله از راست */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1002;
+
+}
+
+.chat-header {
+    background-color: rgb(57,204,203);
+    color: white;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between; /* فاصله بین عنوان و دکمه بستن */
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.chat-btm{
+    display: flex;
+    justify-content: center;
+    
+}
+.chat-messages div {
+    margin-bottom: 10px;
+    padding: 10px; /* فضای داخلی برای متن */
+    border: 1px solid rgb(57,204,203); /* رنگ حاشیه */
+    border-radius: 5px; /* گوشه‌های گرد */
+    background-color: #e7f3ff; /* رنگ پس‌زمینه پیام */
+    max-width: 80%; /* حداکثر عرض پیام */
+    word-wrap: break-word; /* شکستن کلمات در صورت نیاز */
+    align-self: flex-end; /* راست چین کردن پیام */
+}
+
+
+#chatMessageInput {
+    width: calc(100% - 100px);
+    padding: 10px;
+}
+
+#chatSendButton {
+    padding: 10px;
+}
+
+/* افکت لرزش */
+@keyframes shake {
+   0% { transform: translate(0); }
+   25% { transform: translate(-2px, 0); }
+   50% { transform: translate(2px, 0); }
+   75% { transform: translate(-2px, 0); }
+   100% { transform: translate(0); }
+}
+.btn-send-chat{
+    background-color: rgb(57,204,203);
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+.btn-close-chat{
+    border: none;
+}
+#chatCloseButton{
+    background-color: rgb(57,204,203);
+    border: none;
+}
+
+#footer {
+    background-color: rgb(57, 204, 203);
+    color: white;
+    padding-bottom: 20px;
+    position: relative; /* نسبت به دیگر عناصر */
+    bottom: 0;
+    top: 10px;
+    width: 100%;
+    z-index: 1001; /* افزایش z-index به 1001 */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.contact-info, .social-media {
+    flex: 1; /* هر بخش به یک اندازه گسترش می‌یابد */
+    margin: 0 20px; /* فاصله بین بخش‌ها */
+}
+
+.social-media a {
+    margin-right: 10px; /* فاصله بین آیکون‌ها */
+}
+
+.social-media img {
+    width: 30px; /* اندازه آیکون‌ها */
+    height: auto;
+}
+
+.footer-bottom {
+    text-align: center; /* متن در وسط قرار می‌گیرد */
+    margin-top: 20px; /* فاصله بالای متن */
+}
+.logofooter{
+    width: 150px;
+    height: 100px;
+    margin: 25px;
 }

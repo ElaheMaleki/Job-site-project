@@ -12,28 +12,24 @@
          <div >
              <img id="img" class="logo" src="../image/logo blue.png" alt="Logo" />
          </div>
-         <div class="login-btn">
-             <div >
-                 <button class="login-btn-emr"><a><h3>ورود کارفرما</h3></a></button>
-               </div>
-             <div>
-                 <button class="login-btn-emp"><a><h3>ورود کارجو</h3></a></button>
-               </div>
-             
-         </div>
-         
-     </div>
+
+        <div class="p"> امیررضایی 
+        <div class="img"> <img class="img" src="../image/images.png">
+        </div> 
+        <img class="icon" src="c:\Users\HP\Downloads\Bell-youtubepng.parspng.com_-removebg-preview.png"  >
+       </div>
+    </div>
+    
      <br>
      <div id="wrap">
-        <div id="sidebar" class="hidden">
-            <h2></h2>
-            <ul>
-                <li><a href="../html/resume.html">رزومه</a></li>
-                <li><a href="../html/CC.html">آگهی ها</a></li>
-                <li><a href="../html/result.html">نتایج</a></li>
-                <li><a href="../html/CC.html">خروج</a></li>
-            </ul>
-        </div>
+      <div id="sidebar" class="visible">
+         <ul>
+             <li><img src="../image/resume.svg" alt="Resume Icon"><a href="resume.html"><i class="fas fa-file-alt"></i> <span class="menu-text">رزومه</span></a></li>
+             <li><img src="../image/main-page.svg" alt="Ads Icon"><a href="CC.html"><i class="fas fa-bullhorn"></i> <span class="menu-text">آگهی ها</span></a></li>
+             <li><img src="../image/result.svg" alt="Results Icon"><a href="result.html"><i class="fas fa-trophy"></i> <span class="menu-text">نتایج</span></a></li>
+             <li><img src="../image/exit.svg" alt="Logout Icon"><a href="CC.html"><i class="fas fa-sign-out-alt"></i> <span class="menu-text">خروج</span></a></li>
+         </ul>
+       </div>
     </div>
     <br><br><br><br>
     <div class="container">
@@ -89,21 +85,86 @@
             <input type="text" id="projects" class="scrollable-input">
         </div>
     
+        <!-- <div class="section">
+            <label>انتخاب تم:</label>
+            <div class="theme-options">
+                <div class="theme-option">
+                    <input type="radio" id="theme1" name="theme" value="theme1">
+                    <label for="theme1"> </label>
+                    <img src="../image/theme1-preview.png" alt="پیش‌نمایش تم ۱" class="preview-image">
+                </div>
+                <div class="theme-option">
+                    <input type="radio" id="theme2" name="theme" value="theme2">
+                    <label for="theme2"> </label>
+                    <img src="../image/theme2-preview.png" alt="پیش‌نمایش تم ۲" class="preview-image">
+                </div>
+                <div class="theme-option">
+                    <input type="radio" id="theme3" name="theme" value="theme3">
+                    <label for="theme3"> </label>
+                    <img src="../image/theme3-preview.png" alt="پیش‌نمایش تم ۳" class="preview-image">
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- <div class="download-section">
+            <button id="downloadLink">دانلود رزومه</button>
+        </div> -->
         <div class="section">
-            <label for="skills">مهارت‌ها:</label>
-            <input type="text" id="skills" class="scrollable-input">
+            <label>انتخاب تم:</label>
+            <div class="theme-options">
+                <div class="theme-option" onclick="selectTheme('theme1')">
+                    <img src="../image/theme1-preview.png" alt="پیش‌نمایش تم ۱" class="preview-image" id="theme1">
+                    <label for="theme1">قالب ۱</label>
+                </div>
+                <div class="theme-option" onclick="selectTheme('theme2')">
+                    <img src="../image/theme2-preview.png" alt="پیش‌نمایش تم ۲" class="preview-image" id="theme2">
+                    <label for="theme2">قالب ۲</label>
+                </div>
+                <div class="theme-option" onclick="selectTheme('theme3')">
+                    <img src="../image/theme3-preview.png" alt="پیش‌نمایش تم ۳" class="preview-image" id="theme3">
+                    <label for="theme3">قالب ۳</label>
+                </div>
+            </div>
         </div>
-    
+        
         <div class="download-section">
             <button id="downloadLink">دانلود رزومه</button>
         </div>
+        
+        
+        
+        <script>
+        // کد JavaScript برای دانلود فایل...
+        </script>
+        
+        
+        <!-- <div class="download-section">
+            <button id="downloadLink">دانلود رزومه</button>
+        </div> -->
     </div>
 
     
     <div id="footer">
-        <h2></h2>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>تماس با ما</h4>
+                <p>آدرس: تهران، خانی آباد ،دانشگاه دکتر شریعتی</p>
+                <p>شماره تلفن: ۰۹۱۲۸۳۲۱۲۱۲</p>
+            </div>
+            <div class="social-media">
+                <h4>شبکه‌های اجتماعی</h4>
+                <a href="#" target="_blank"><img src="../image/facebook.svg" alt="Facebook" /></a>
+                <a href="#" target="_blank"><img src="../image/twitter.svg" alt="Twitter" /></a>
+                <a href="#" target="_blank"><img src="../image/instagram.svg" alt="Instagram" /></a>
+                <a href="#" target="_blank"><img src="../image/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© تمامی حقوق شرکت محفوظ است.</p>
+        </div>
+        <div>
+        </div>
     </div>
-    
-<script src="../js/CC.js"></script> 
+<script src="../js/resume.js"></script> 
 </body>
 </html>

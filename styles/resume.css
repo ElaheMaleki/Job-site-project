@@ -8,6 +8,7 @@ body {
     background-color: #f4f4f4;
     font-family: mainFont;
     margin: 0;
+    overflow-x: hidden;
     padding: 20px;
 }
 
@@ -24,46 +25,40 @@ body {
     padding-left: 15px;
 }
 
-.login-btn {
-    display: flex;
-    align-items: start; 
-    margin-left: 10px;
+.p{
+    font-size: 18px; 
+    display: flex; /*  برای قرار دادن تصویر و نام در یک خط */
+    align-items: center; /* تصویر و نام همتراز باشند*/
+    
+ 
 }
-
+.img{  
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
+ 
+}
 .logo {
     width: 110px;
     height: 70px;
+    display: flex;
+   justify-content: space-between; 
 }
 
-.login-btn-emp, .login-btn-emr {
-    font-family: 'mainFont'; 
-    border-radius: 25px;
-    padding: 0px 10px; 
-    border: none;
-    text-align: center; 
-    display: inline-block;
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-}
-
-.login-btn-emp {
-    background-color: white;
-    color: rgb(57,204,203); 
-}
-
-.login-btn-emp:hover {
-    transform: scale(1.05); 
-}
-
-.login-btn-emr {
-    color: white;
-    background-color: rgb(57,204,203); 
-}
-
-.login-btn-emr:hover {
-    transform: scale(1.05); 
-}
-
+.icon {
+    padding: 5px;;
+         width: 30px; /* اندازه آیکن */
+         height: 30px; /* اندازه آیکن */
+    }
+  
+.icon:hover {
+  background-color:red;
+     width: 30px; /* اندازه آیکن */
+     height: 30px; /* اندازه آیکن */
+  }
+  
 #wrap {
     margin-top: 70px; 
 }
@@ -74,24 +69,59 @@ body {
     font-size: 24px; 
     cursor: pointer;
 }
-
 #sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
+    width: 150px;
+    background-color: #f4f4f4; 
     position: fixed;
-    right: -250px;
-    top: 60px;
+    right: -250px; 
+    top: 80px;
     height: calc(100% - 60px);
     transition: right 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+
 }
 
+#sidebar a {
+    text-decoration: none;
+}
 #sidebar.visible {
     right: 0; 
 }
- 
-.hidden {
-    display: none;
- }
+
+#sidebar ul {
+    list-style: none; 
+    text-decoration: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+#sidebar li {
+    display: flex; 
+    align-items: center; 
+    padding: 15px 20px; 
+    transition: background-color 0.3s; 
+}
+
+#sidebar li:hover {
+    background-color: #e0e0e0; 
+}
+
+#sidebar img {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 10px; 
+}
+
+.menu-text {
+    display: inline; 
+    font-size: 16px; 
+    color: #333; 
+}
+
+.sidebar-collapsed .menu-text {
+    display: none; 
+}
  
 
 .container {
@@ -172,28 +202,102 @@ button:hover {
    font-weight:bold ; 
 }
 
+#footer {
+    background-color: rgb(57, 204, 203);
+    color: white;
+    padding-bottom: 20px;
+    position: relative; /* نسبت به دیگر عناصر */
+    bottom: 0;
+    top: 10px;
+    width: 100%;
+    z-index: 1001
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.contact-info, .social-media {
+    flex: 1; /* هر بخش به یک اندازه گسترش می‌یابد */
+    margin: 0 20px; /* فاصله بین بخش‌ها */
+}
+
+.social-media a {
+    margin-right: 10px; /* فاصله بین آیکون‌ها */
+}
+
+.social-media img {
+    width: 30px; /* اندازه آیکون‌ها */
+    height: auto;
+}
+
+.footer-bottom {
+    text-align: center; /* متن در وسط قرار می‌گیرد */
+    margin-top: 20px; /* فاصله بالای متن */
+}
+.logofooter{
+    width: 150px;
+    height: 100px;
+    margin: 25px;
+}
+.theme-options {
+    display: flex; /* استفاده از فلکس باکس برای نمایش افقی */
+    gap: 20px; /* فاصله بین گزینه‌ها */
+    align-items: center; /* تراز کردن عمودی گزینه‌ها */
+    justify-content: space-between;
+
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column; /* قرار دادن دکمه و تصویر در ستون */
+    align-items: center; /* تراز کردن افقی */
+    cursor: pointer; /* تغییر نشانگر ماوس به دست */
+}
+
+.preview-image {
+    width: 100px; /* عرض تصویر پیش‌نمایش */
+    height: auto; /* حفظ نسبت تصویر */
+    margin-top: 5px; /* فاصله بالای تصویر */
+    border: 2px solid transparent; /* حاشیه ابتدایی بدون رنگ */
+    border-radius: 5px; /* گوشه‌های گرد */
+}
+
+.selected {
+    border-color: blue; /* رنگ حاشیه انتخاب شده */
+}
 @media (max-width: 600px) {
+    .theme-options {
+        flex-direction: column; /* نمایش عمودی در حالت موبایل */
+        align-items: center;         /* وسط‌چین کردن عناصر در محور y */
+    }
+
+    .theme-option {
+        margin-bottom: 15px; /* فاصله بین گزینه‌ها در حالت عمودی */
+    }
     #sidebar {
-       display: none; 
-       right: -250px; 
-       transition: none; 
-    }
-   
-    #sidebar.visible {
-       display: block; 
-       right: -20px; 
-       transition: right 0.3s ease; 
-    }
+        display: none; 
+        right: -250px; 
+        transition: none; 
+     }
     
-    .name-surname, .email-phone {
-       flex-direction: column; 
-       align-items: stretch; 
-    }
-   
-    .name-field, .surname-field, .email-field, .phone-field,
-    input[type=text], input[type=email], select {
-       width: 100%; 
-       margin-right: 0;
-       margin-bottom: 10px; 
-    }
+     #sidebar.visible {
+        display: block; 
+        right: -20px; 
+        transition: right 0.3s ease; 
+     }
+     
+     .name-surname, .email-phone {
+        flex-direction: column; 
+        align-items: stretch; 
+     }
+    
+     .name-field, .surname-field, .email-field, .phone-field,
+     input[type=text], input[type=email], select {
+        width: 100%; 
+        margin-right: 0;
+        margin-bottom: 10px; 
+     }
 }
