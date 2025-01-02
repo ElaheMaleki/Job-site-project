@@ -16,6 +16,7 @@ function hideTooltip() {
 }
 
 
+
     document.querySelector('.btn button').addEventListener('click', function(event) {
         event.preventDefault(); 
 
@@ -29,4 +30,5 @@ function hideTooltip() {
         else {
             window.location.href = '../html/change.html'; 
         }
+        
     });
