@@ -30,57 +30,7 @@ body {
     align-items: start; 
     margin-left: 10px;
 }
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
 
-.search-box {
-    display: flex;
-    align-items: center;
-    max-width: 600px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
-
-.search-box:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-#search-input {
-    flex: 1;
-    padding: 15px 20px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    background-color: transparent;
-}
-
-#search-input::placeholder {
-    color: #999;
-}
-
-#search-button {
-    padding: 15px 20px;
-    background-color: #39ccc9; /* Light blue background */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#search-button:hover {
-    background-color: #2da4a4; /* Darker blue on hover */
-}
-
-#search-button i {
-    font-size: 1.2em;
-}
 
 .logo {
     width: 110px;
@@ -180,18 +130,64 @@ body {
     display: none; /* Hide text when collapsed */
 }
 
-@media (max-width: 768px) {
-    #sidebar {
-        right: -250px; /* Hidden by default on mobile */
-    }
-}
-
 
 .page-title{
     background-color:rgb(57,204,203) ;
     padding: 10px;
     margin-top: 50px ;
     margin-bottom: 50px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+#search-input::placeholder {
+    color: #999;
+}
+
+#search-button {
+    padding: 15px 20px;
+    background-color: #39ccc9; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #2da4a4; 
+}
+
+#search-button i {
+    font-size: 1.2em;
 }
 
 .container {
@@ -293,6 +289,9 @@ h1 {
    .company-logo {
        margin-bottom: 10px; 
    }
+   #sidebar {
+    right: -250px; 
+}
    
 }
 
@@ -450,11 +449,10 @@ h1 {
 #footer {
     background-color: rgb(57, 204, 203);
     color: white;
-    padding: 20px;
+    padding-bottom: 20px;
     position: relative; /* نسبت به دیگر عناصر */
     bottom: 0;
     top: 10px;
-    width: 100%;
     width: 100%;
     z-index: 1001; /* افزایش z-index به 1001 */
 }

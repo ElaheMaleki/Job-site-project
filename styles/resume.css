@@ -9,7 +9,7 @@ body {
     font-family: mainFont;
     margin: 0;
     overflow-x: hidden;
-
+    
 }
 
 #header {
@@ -30,6 +30,7 @@ body {
     align-items: start; 
     margin-left: 10px;
 }
+
 
 .logo {
     width: 110px;
@@ -75,24 +76,59 @@ body {
     font-size: 24px; 
     cursor: pointer;
 }
-
 #sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
+    width: 150px;
+    background-color: #f4f4f4; 
     position: fixed;
-    right: -250px;
-    top: 60px;
+    right: -250px; 
+    top: 80px;
     height: calc(100% - 60px);
     transition: right 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+
 }
 
+#sidebar a {
+    text-decoration: none;
+}
 #sidebar.visible {
     right: 0; 
 }
- 
-.hidden {
-    display: none;
- }
+
+#sidebar ul {
+    list-style: none; 
+    text-decoration: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+#sidebar li {
+    display: flex; 
+    align-items: center; 
+    padding: 15px 20px; 
+    transition: background-color 0.3s; 
+}
+
+#sidebar li:hover {
+    background-color: #e0e0e0; 
+}
+
+#sidebar img {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 10px; 
+}
+
+.menu-text {
+    display: inline; 
+    font-size: 16px; 
+    color: #333; 
+}
+
+.sidebar-collapsed .menu-text {
+    display: none; 
+}
  
 
 .container {
@@ -173,40 +209,15 @@ button:hover {
    font-weight:bold ; 
 }
 
-@media (max-width: 600px) {
-    #sidebar {
-       display: none; 
-       right: -250px; 
-       transition: none; 
-    }
-   
-    #sidebar.visible {
-       display: block; 
-       right: -20px; 
-       transition: right 0.3s ease; 
-    }
-    
-    .name-surname, .email-phone {
-       flex-direction: column; 
-       align-items: stretch; 
-    }
-   
-    .name-field, .surname-field, .email-field, .phone-field,
-    input[type=text], input[type=email], select {
-       width: 100%; 
-       margin-right: 0;
-       margin-bottom: 10px; 
-    }
-}
-
 #footer {
     background-color: rgb(57, 204, 203);
     color: white;
-    padding: 20px;
+    padding-bottom: 20px;
     position: relative; /* نسبت به دیگر عناصر */
     bottom: 0;
     top: 10px;
     width: 100%;
+    z-index: 1001
 }
 
 .footer-content {
@@ -268,10 +279,32 @@ button:hover {
     .theme-options {
         flex-direction: column; /* نمایش عمودی در حالت موبایل */
         align-items: center;         /* وسط‌چین کردن عناصر در محور y */
-
     }
 
     .theme-option {
         margin-bottom: 15px; /* فاصله بین گزینه‌ها در حالت عمودی */
     }
+    #sidebar {
+        display: none; 
+        right: -250px; 
+        transition: none; 
+     }
+    
+     #sidebar.visible {
+        display: block; 
+        right: -20px; 
+        transition: right 0.3s ease; 
+     }
+     
+     .name-surname, .email-phone {
+        flex-direction: column; 
+        align-items: stretch; 
+     }
+    
+     .name-field, .surname-field, .email-field, .phone-field,
+     input[type=text], input[type=email], select {
+        width: 100%; 
+        margin-right: 0;
+        margin-bottom: 10px; 
+     }
 }

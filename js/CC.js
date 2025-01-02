@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // اضافه کردن رویداد برای تغییر اندازه پنجره
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            sidebar.classList.add('visible'); // اگر بزرگتر از 768 باشد، سایدبار باز باشد
+        if (window.innerWidth > 600) {
+            sidebar.classList.add('visible'); 
             sidebar.style.right = '0';
             sidebar.classList.remove('sidebar-collapsed'); // کلاس بسته را حذف کنید
         } else {
@@ -40,21 +40,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
+
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
+
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
-
-  function selectOption(option) {
-    document.getElementById("dropdownButton").innerText = option;
 }
+
+function selectOption(option) {
+  document.getElementById("dropdownButton").innerText = option; 
+  console.log("گزینه انتخاب شده:", option);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".tablinks").click();
+});
 
 
 const chatIcon = document.getElementById('chatIcon');
@@ -62,13 +69,13 @@ const chatContainer = document.getElementById('chatContainer');
 const chatCloseButton = document.getElementById('chatCloseButton');
 
 chatIcon.addEventListener('click', function() {
-   chatContainer.style.display = 'block'; // نمایش پنجره چت
+   chatContainer.style.display = 'block'; 
    console.log(chatContainer.style.display)
 });
 
 
 chatCloseButton.addEventListener('click', function() {
-   chatContainer.style.display = 'none'; // پنهان کردن پنجره چت
+   chatContainer.style.display = 'none'; 
 });
 
 document.getElementById('chatSendButton').addEventListener('click', function() {
