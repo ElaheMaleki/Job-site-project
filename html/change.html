@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/change.css">
+</head>
+<body dir="rtl">
+    <div class="chat-icon" id="chatIcon">
+        <span>💬</span>
+        <div class="chat-tooltip">از کارفرما سوالی دارید؟</div>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h2>چت با کارفرما</h2>
+            <button id="chatCloseButton">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-btm">
+        <input type="text" id="chatMessageInput" placeholder="پیام خود را اینجا تایپ کنید..." />
+        <button class="btn-send-chat" id="chatSendButton">ارسال</button>
+    </div>
+    </div>
+    <div id="header">
+       <div> <button id="menu-toggle" aria-label="Toggle menu">☰</button></div>
+        <div >
+            <img id="img" class="logo" src="../image/logo blue.png " alt="Logo"  />
+        </div>
+         <div class="p">امیررضایی 
+
+         <div class="img"> 
+            <a href="prof.html" class="img-link">
+                <img class="img" src="../image/images.png">
+            </a>
+         </div> 
+
+         <img class="icon" src="c:\Users\HP\Downloads\Bell-youtubepng.parspng.com_-removebg-preview.png" 
+         onmouseover="showTooltip(event)" 
+         onmouseout="hideTooltip()">
+    <div id="tooltip" class="tooltip">درحال حاضر پیامی جهت مشاهده وجود ندارد</div>
+</div>
+</div>
+
+    <div id="welcome-box" class="welcome-box">
+        <span class="close-btn" onclick="closeWelcomeBox()">&times;</span>
+        <h2>امیررضایی خوش آمدید !</h2>
+        <p>به صفحه پروفایل خود خوش آمدید. امیدواریم از تجربه خود لذت ببرید!</p>
+    </div>
+    
+    <div class="banner1">
+        <div class="banner-content">
+            <br>
+            <br>
+            <h1>شغل رویایی خود را پیدا کنید!</h1>
+            <p>با ما به دنیای جدیدی از فرصت‌های شغلی وارد شوید.</p>
+            <p class="tagline">فرصت‌ها منتظر شما هستند، همین حالا اقدام کنید!</p>
+        </div>
+    </div>
+    
+    <script src="../js/change.js"></script>
+    <br>
+    <div id="wrap">
+        <div id="sidebar" class="visible">
+            <ul>
+                <li><img src="../image/resume.svg" alt="Resume Icon"><a href="resume.html"><i class="fas fa-file-alt"></i> <span class="menu-text">رزومه</span></a></li>
+                <li><img src="../image/main-page.svg" alt="Ads Icon"><a href="CC.html"><i class="fas fa-bullhorn"></i> <span class="menu-text">آگهی ها</span></a></li>
+                <li><img src="../image/result.svg" alt="Results Icon"><a href="result.html"><i class="fas fa-trophy"></i> <span class="menu-text">نتایج</span></a></li>
+                <li><img src="../image/exit.svg" alt="Logout Icon"><a href="CC.html"><i class="fas fa-sign-out-alt"></i> <span class="menu-text">خروج</span></a></li>
+            </ul>
+        </div>
+       
+    </div>
+    
+    <div id="footer">
+        <h2></h2>
+    </div>
+
+    <script src="../js/CC.js"></script> 
+</body>
+</html>

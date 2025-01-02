@@ -1,0 +1,287 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../font/Vazirmatn-Regular.woff2);
+}
+
+body {
+    background-image: url('../image/banner1.png');
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0;
+    height: 100vh; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    font-family: mainFont;
+    padding: 20px;
+}
+
+#header {
+    background-color: rgb(57,204,203);
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001; 
+   
+}
+.p{
+    font-size: 18px; 
+    display: flex; 
+    align-items: center; 
+}
+.img{  
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
+
+}
+
+.logo {
+    width: 110px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between; 
+}
+.icon {
+   padding: 5px;;
+        width: 30px;
+        height: 30px;
+    }
+
+.icon:hover{
+background-color: red;
+    width: 30px; 
+    height: 30px; 
+}
+.tooltip {
+    display: none; 
+    position: absolute; 
+    background-color: #fefefe;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #333;
+}
+.welcome-box {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bce2eb; 
+    background-color:#318ba2; 
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+}
+
+.close-btn:hover {
+    color: red; 
+}
+.banner1 {
+    background-size: cover; 
+    background-position: center; 
+    height: 790px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: #308ba2; 
+    text-align: center; 
+    margin-top: -50px;
+ }
+ .tagline {
+    font-size: 1.1em; 
+    color: #f25044; 
+    margin-bottom: 20px; 
+ }
+
+
+
+#menu-toggle {
+    background: none;
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer;
+   
+}
+
+
+#sidebar {
+    width: 150px;
+    background-color: #f4f4f4; /* Light background */
+    position: fixed;
+    right: -250px; /* Hidden by default */
+    top: 80px;
+    height: calc(100% - 60px);
+    transition: right 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it appears above other content */
+
+}
+
+#sidebar a {
+    text-decoration: none;
+}
+#sidebar.visible {
+    right: 0; 
+}
+
+#sidebar ul {
+    list-style: none; /* Remove default list styling */
+    text-decoration: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+#sidebar li {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 15px 20px; /* Add padding for spacing */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+#sidebar li:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+#sidebar img {
+    width: 24px; /* Set a consistent icon size */
+    height: 24px; /* Set a consistent icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+.sidebar-collapsed .menu-text {
+    display: none; /* Hide text when collapsed */
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(48,139,161);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 1002;
+}
+
+.chat-icon:hover {
+    animation: shake 1s; /* افکت لرزش */
+}
+
+.chat-tooltip {
+    position: absolute;
+    bottom: 60px;
+    right: -10px;
+    background-color: rgb(57,204,203);
+    color: rgb(5, 4, 4);
+    padding: 5px;
+    border-radius: 5px;
+    display: none; /* پنهان کردن tooltip */
+}
+
+.chat-icon:hover .chat-tooltip {
+    display: block; /* نمایش tooltip هنگام هاور */
+}
+
+.chat-container {
+    display: none; /* پنهان کردن پنجره چت */
+    width: 400px;
+    position: fixed;
+    bottom: 80px; /* فاصله از پایین */
+    right: 20px; /* فاصله از راست */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1002;
+
+}
+
+.chat-header {
+    background-color: rgb(57,204,203);
+    color: white;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between; /* فاصله بین عنوان و دکمه بستن */
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.chat-btm{
+    display: flex;
+    justify-content: center;
+    
+}
+.chat-messages div {
+    margin-bottom: 10px;
+    padding: 10px; /* فضای داخلی برای متن */
+    border: 1px solid rgb(57,204,203); /* رنگ حاشیه */
+    border-radius: 5px; /* گوشه‌های گرد */
+    background-color: #e7f3ff; /* رنگ پس‌زمینه پیام */
+    max-width: 80%; /* حداکثر عرض پیام */
+    word-wrap: break-word; /* شکستن کلمات در صورت نیاز */
+    align-self: flex-end; /* راست چین کردن پیام */
+}
+
+
+#chatMessageInput {
+    width: calc(100% - 100px);
+    padding: 10px;
+}
+
+#chatSendButton {
+    padding: 10px;
+}
+.btn-send-chat{
+    background-color: rgb(57,204,203);
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+.btn-close-chat{
+    border: none;
+}
+#chatCloseButton{
+    background-color: rgb(57,204,203);
+    border: none;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        right: -250px; 
+    }
+     .welcome-box{
+        width: 200px;
+        height: 100px;
+        font-size: 11px;
+        top: 140px;
+     }
+}
