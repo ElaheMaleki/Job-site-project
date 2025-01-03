@@ -94,3 +94,41 @@ document.getElementById('chatSendButton').addEventListener('click', function() {
    }
 });
 console.log()
+document.addEventListener("DOMContentLoaded", function() {
+    const ctx = document.getElementById('resultsChart2').getContext('2d');
+    const resultsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['همه', 'پذیرفته شده', 'رد شده'],
+            datasets: [{
+                label: 'تعداد درخواست‌ها',
+                data: [50, 30, 20],
+                backgroundColor: [
+                    'rgba(57, 204, 203, 0.6)',
+                    'rgba(76, 175, 80, 0.6)',
+                    'rgba(244, 67, 54, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(57, 204, 203, 1)',
+                    'rgba(76, 175, 80, 1)',
+                    'rgba(244, 67, 54, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            }
+        }
+    });
+});

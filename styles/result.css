@@ -145,7 +145,7 @@ body {
 
 /* Style the tab */
 .tab {
-    
+    /* margin-right: 100px; */
     overflow: hidden;
     font-family: mainFont;
     border: 1px solid #ccc;
@@ -296,6 +296,13 @@ body {
     width: 100px;
     font-family: mainFont;
 }
+@media (max-width: 600px) {
+    .dropdown-content {
+        left: 0; /* منو به سمت چپ صفحه قرار می‌گیرد */
+        right: auto; /* اطمینان از عدم نمایش در سمت راست */
+    }
+}
+
 @media (max-width: 600px) { 
     .dropbtn {
         width: 70px;
@@ -397,4 +404,173 @@ body {
 }
 
 
+.results-section {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
 
+.chart-container {
+width:35% ;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+/* @media (max-width: 600px) { 
+    .chart-container {
+        margin: 5px; 
+    }
+} */
+.recommendation-box {
+    width: 35%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.recommendation-box h3 {
+    color: rgb(57, 204, 203);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.recommendation-box ul {
+    list-style-type: disc;
+    padding-right: 20px;
+}
+
+.recommendation-box li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .results-section {
+        flex-direction: column;
+    }
+
+    .chart-container,
+    .recommendation-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(48,139,161);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 1002;
+}
+
+.chat-icon:hover {
+    animation: shake 1s; /* افکت لرزش */
+}
+
+.chat-tooltip {
+    position: absolute;
+    bottom: 60px;
+    right: -10px;
+    background-color: rgb(57,204,203);
+    color: rgb(5, 4, 4);
+    padding: 5px;
+    border-radius: 5px;
+    display: none; /* پنهان کردن tooltip */
+}
+
+.chat-icon:hover .chat-tooltip {
+    display: block; /* نمایش tooltip هنگام هاور */
+}
+
+.chat-container {
+    display: none; /* پنهان کردن پنجره چت */
+    width: 400px;
+    position: fixed;
+    bottom: 80px; /* فاصله از پایین */
+    right: 20px; /* فاصله از راست */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1002;
+
+}
+
+.chat-header {
+    background-color: rgb(57,204,203);
+    color: white;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between; /* فاصله بین عنوان و دکمه بستن */
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.chat-btm{
+    display: flex;
+    justify-content: center;
+    
+}
+.chat-messages div {
+    margin-bottom: 10px;
+    padding: 10px; /* فضای داخلی برای متن */
+    border: 1px solid rgb(57,204,203); /* رنگ حاشیه */
+    border-radius: 5px; /* گوشه‌های گرد */
+    background-color: #e7f3ff; /* رنگ پس‌زمینه پیام */
+    max-width: 80%; /* حداکثر عرض پیام */
+    word-wrap: break-word; /* شکستن کلمات در صورت نیاز */
+    align-self: flex-end; /* راست چین کردن پیام */
+}
+
+
+#chatMessageInput {
+    width: calc(100% - 100px);
+    padding: 10px;
+}
+
+#chatSendButton {
+    padding: 10px;
+}
+
+/* افکت لرزش */
+@keyframes shake {
+   0% { transform: translate(0); }
+   25% { transform: translate(-2px, 0); }
+   50% { transform: translate(2px, 0); }
+   75% { transform: translate(-2px, 0); }
+   100% { transform: translate(0); }
+}
+.btn-send-chat{
+    background-color: rgb(57,204,203);
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+.btn-close-chat{
+    border: none;
+}
+#chatCloseButton{
+    background-color: rgb(57,204,203);
+    border: none;
+}

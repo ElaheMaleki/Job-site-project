@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../styles/result.css"></head>
 <body dir="rtl">
     <div id="header">
@@ -22,7 +23,22 @@
          </div>
          
      </div>
- 
+     <div class="chat-icon" id="chatIcon">
+        <span>💬</span>
+        <div class="chat-tooltip">از کارفرما سوالی دارید؟</div>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h2>چت با کارفرما</h2>
+            <button id="chatCloseButton">✖</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-btm">
+        <input type="text" id="chatMessageInput" placeholder="پیام خود را اینجا تایپ کنید..." />
+        <button class="btn-send-chat" id="chatSendButton">ارسال</button>
+    </div>
+    </div>
      <br>
      <div id="sidebar" class="visible">
          <ul>
@@ -61,6 +77,7 @@
         <button class="tablinks" onclick="openCity(event, 'denied')">رد شده</button>
       </div>
       
+    
       <div id="all" class="tabcontent">
         <div class="job-card">
             <img src="../image/توانمند.webp" alt="لوگوی شرکت" class="company-logo">
@@ -181,6 +198,23 @@
       </div>
     </div>
 
+    <div class="results-section">
+        <div class="chart-container">
+            <canvas id="resultsChart2"></canvas>
+        </div>
+        <div class="recommendation-box">
+            <h3>توصیه‌هایی برای بهبود رزومه</h3>
+            <ul>
+                <li>مهارت‌های خود را به‌روزرسانی کنید.</li>
+                <li>تجربه‌های کاری مرتبط را برجسته کنید.</li>
+                <li>از کلمات کلیدی مرتبط با شغل استفاده کنید.</li>
+                <li>رزومه خود را مختصر و مفید نگه دارید.</li>
+                <li>مهارت‌های نرم مانند کار تیمی و ارتباطات را اضافه کنید.</li>
+            </ul>
+        </div>
+    </div>
+
+
     <div id="footer">
         <div class="footer-content">
             <div class="contact-info">
@@ -203,6 +237,47 @@
         </div>
     </div>
 
-    <script  src="../js/CC.js"></script>
+    <script src="../js/CC.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('resultsChart2').getContext('2d');
+            const resultsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['همه', 'پذیرفته شده', 'رد شده'],
+                    datasets: [{
+                        label: 'تعداد درخواست‌ها',
+                        data: [15,5, 10],
+                        backgroundColor: [
+                            'rgba(57, 204, 203, 0.6)',
+                            'rgba(76, 175, 80, 0.6)',
+                            'rgba(244, 67, 54, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(57, 204, 203, 1)',
+                            'rgba(76, 175, 80, 1)',
+                            'rgba(244, 67, 54, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        });
+   </script>
 </body>
 </html>
