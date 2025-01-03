@@ -6,6 +6,7 @@
     src: url(../font/Vazirmatn-Regular.woff2);
 }
 body {
+    color: white;
     background-image: url('../image/2.png');
     font-family: mainFont;
 
@@ -54,10 +55,16 @@ input{
     justify-content: end;
     gap: 5px;
     float: left;
+    padding: 5px;
+    a{
+        text-decoration: none;
+        color:#318ba2 ;
+        font-family: mainFont;
+    }
    
 }
 button:hover{
-background-color:rgb(4, 146, 110);
+    transform: scale(1.05); 
 }
 
 @media (max-width: 768px) {
