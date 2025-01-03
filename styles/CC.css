@@ -65,7 +65,8 @@ a{
 
 .login-btn-emp:hover {
     transform: scale(1.05); 
-    background-color: white;
+    background-color: rgb(45,164,164);
+   a{color: white;} 
 }
 
 .login-btn-emr {
