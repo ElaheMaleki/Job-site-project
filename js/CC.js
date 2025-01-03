@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-function openCity(evt, cityName) {
+function openStatus(evt, time) {
     var i, tabcontent, tablinks;
 
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -50,13 +50,13 @@ function openCity(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(time).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
 function selectOption(option) {
   document.getElementById("dropdownButton").innerText = option; 
-  console.log("گزینه انتخاب شده:", option);
+//   console.log("گزینه انتخاب شده:", option);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -94,41 +94,40 @@ document.getElementById('chatSendButton').addEventListener('click', function() {
    }
 });
 console.log()
-document.addEventListener("DOMContentLoaded", function() {
-    const ctx = document.getElementById('resultsChart2').getContext('2d');
-    const resultsChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['همه', 'پذیرفته شده', 'رد شده'],
-            datasets: [{
-                label: 'تعداد درخواست‌ها',
-                data: [50, 30, 20],
-                backgroundColor: [
-                    'rgba(57, 204, 203, 0.6)',
-                    'rgba(76, 175, 80, 0.6)',
-                    'rgba(244, 67, 54, 0.6)'
-                ],
-                borderColor: [
-                    'rgba(57, 204, 203, 1)',
-                    'rgba(76, 175, 80, 1)',
-                    'rgba(244, 67, 54, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top'
-                }
-            }
-        }
-    });
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     const ctx = document.getElementById('resultsChart2').getContext('2d');
+//     const resultsChart = new Chart(ctx, {
+//         type: 'bar',
+//         data: {
+//             labels: ['همه', 'پذیرفته شده', 'رد شده'],
+//             datasets: [{
+//                 label: 'وضعیت درخواست‌ها',
+//                 data: [15, 6, 9],
+//                 backgroundColor: [
+//                     'rgba(57, 204, 203, 0.6)',
+//                     'rgba(76, 175, 80, 0.6)',
+//                     'rgba(244, 67, 54, 0.6)'
+//                 ],
+//                 borderColor: [
+//                     'rgba(57, 204, 203, 1)',
+//                     'rgba(76, 175, 80, 1)',
+//                     'rgba(244, 67, 54, 1)'
+//                 ],
+//             }]
+//         },
+//         options: {
+//             scales: {
+//                 y: {
+//                     beginAtZero: true
+//                 }
+//             },
+//             responsive: true,
+//             plugins: {
+//                 // legend: {
+//                 //     display: true,
+//                 //     position: 'top'
+//                 // }
+//             }
+//         }
+//     });
+// });

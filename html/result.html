@@ -68,9 +68,9 @@
      </div>
     
      <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'all')">همه</button>
-        <button class="tablinks" onclick="openCity(event, 'reviwed')">بررسی شده</button>
-        <button class="tablinks" onclick="openCity(event, 'denied')">رد شده</button>
+        <button class="tablinks" onclick="openStatus(event, 'all')">همه</button>
+        <button class="tablinks" onclick="openStatus(event, 'reviwed')">بررسی شده</button>
+        <button class="tablinks" onclick="openStatus(event, 'denied')">رد شده</button>
       </div>
       
     
@@ -265,12 +265,7 @@
                         }
                     },
                     responsive: true,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'top'
-                        }
-                    }
+               
                 }
             });
         });
