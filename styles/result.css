@@ -25,47 +25,40 @@ body {
     padding-left: 15px;
 }
 
-.login-btn {
-    display: flex;
-    align-items: start; 
-    margin-left: 10px;
+.p{
+    font-size: 18px; 
+    display: flex; /*  برای قرار دادن تصویر و نام در یک خط */
+    align-items: center; /* تصویر و نام همتراز باشند*/
+    
+ 
 }
-
-
+.img{  
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
+ 
+}
 .logo {
     width: 110px;
     height: 70px;
+    display: flex;
+   justify-content: space-between; 
 }
 
-.login-btn-emp, .login-btn-emr {
-    font-family: 'mainFont'; 
-    border-radius: 25px;
-    padding: 0px 10px; 
-    border: none;
-    text-align: center; 
-    display: inline-block;
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-}
-
-.login-btn-emp {
-    background-color: white;
-    color: rgb(57,204,203); 
-}
-
-.login-btn-emp:hover {
-    transform: scale(1.05); 
-}
-
-.login-btn-emr {
-    color: white;
-    background-color: rgb(57,204,203); 
-}
-
-.login-btn-emr:hover {
-    transform: scale(1.05); 
-}
-
+.icon {
+    padding: 5px;;
+         width: 30px; /* اندازه آیکن */
+         height: 30px; /* اندازه آیکن */
+    }
+  
+.icon:hover {
+  background-color:red;
+     width: 30px; /* اندازه آیکن */
+     height: 30px; /* اندازه آیکن */
+  }
+  
 #wrap {
     margin-top: 70px; 
 }
