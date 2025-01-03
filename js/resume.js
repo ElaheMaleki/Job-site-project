@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedImage = document.getElementById(theme);
         selectedImage.classList.add('selected');
         
-        // شما می‌توانید در اینجا کدی برای ذخیره انتخاب کاربر یا هر کار دیگری اضافه کنید.
     }
 
     document.getElementById('downloadLink').addEventListener('click', function() {
@@ -63,20 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         switch (selectedTheme.id) {
             case 'theme1':
-                fileName = 'file1.docx'; // نام فایل برای تم ۱
+                fileName = 'file1.docx'; 
                 break;
             case 'theme2':
-                fileName = 'file2.docx'; // نام فایل برای تم ۲
+                fileName = 'file2.docx'; 
                 break;
             case 'theme3':
-                fileName = 'file3.docx'; // نام فایل برای تم ۳
+                fileName = 'file3.docx'; 
                 break;
             default:
                 alert('لطفا یک تم انتخاب کنید.');
-                return; // اگر هیچ تمی انتخاب نشده باشد، تابع متوقف می‌شود.
+                return; 
         }
 
-        // ایجاد لینک دانلود
         const link = document.createElement('a');
         link.href = `../resume/${fileName}`; // مسیر فایل‌ها را به درستی تنظیم کنید.
         link.download = fileName;
