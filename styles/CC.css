@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
     font-family: mainFont;
     margin: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     
 }
 
@@ -172,8 +172,10 @@ a{
     flex: 1;
     padding: 15px 20px;
     border: none;
+    outline: none;
     font-size: 1em;
     background-color: transparent;
+    font-family: mainFont;
 }
 
 #search-input::placeholder {
@@ -300,6 +302,12 @@ h1 {
    #sidebar {
     right: -250px; 
 }
+    .login-btn-emp, .login-btn-emr{
+        font-size: 10px;
+    }
+    .container{
+        width: 90%;
+    }  
    
 }
 

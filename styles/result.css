@@ -49,14 +49,14 @@ body {
 
 .icon {
     padding: 5px;;
-         width: 30px; /* اندازه آیکن */
-         height: 30px; /* اندازه آیکن */
+         width: 30px; 
+         height: 30px; 
     }
   
 .icon:hover {
   background-color:red;
-     width: 30px; /* اندازه آیکن */
-     height: 30px; /* اندازه آیکن */
+     width: 30px; 
+     height: 30px; 
   }
   
 #wrap {
@@ -248,37 +248,7 @@ body {
    background-color: rgb(45,164,164); /* تغییر رنگ دکمه در حالت هاور */
 }
 
-/* استایل ریسپانسیو */
-@media (max-width: 600px) {
-   .job-list {
-    margin-bottom: 20px;
-    direction: rtl;
-    margin-bottom: 20px;
-    grid-template-columns: repeat(1, 1fr); /* یک باکس در هر خط در موبایل */
-   }
-   .job-card {
-    flex-direction: column; /* چیدمان عمودی در موبایل */
-    align-items: flex-start; /* تراز به سمت چپ */
-    margin: 20px;
-}
-   .button-group {
-       flex-direction: row; /* چیدمان افقی دکمه‌ها در موبایل */
-       gap: 10px; /* فاصله بین دکمه‌ها */
-       margin-top: 10px; /* فاصله بالای دکمه‌ها */
-       justify-content: center; /* تراز به مرکز */
-   }
 
-   .company-logo {
-       margin-bottom: 10px; /* فاصله زیر لوگو */
-   }
-   .tablinks {
-    margin-right: 0; 
-}
-.tabcontent{
-    margin-right: 0;
-}
-   
-}
 .dropbtn {
     color: rgb(57, 204, 203);
     background-color: white;
@@ -288,18 +258,6 @@ body {
     cursor: pointer;
     width: 100px;
     font-family: mainFont;
-}
-@media (max-width: 600px) {
-    .dropdown-content {
-        left: 0; /* منو به سمت چپ صفحه قرار می‌گیرد */
-        right: auto; /* اطمینان از عدم نمایش در سمت راست */
-    }
-}
-
-@media (max-width: 600px) { 
-    .dropbtn {
-        width: 70px;
-    }
 }
 
 .dropdown {
@@ -350,11 +308,6 @@ body {
 
 }
 
-@media (max-width: 600px) { 
-    .main-content {
-        margin: 10px; 
-    }
-}
 #footer {
     background-color: rgb(57, 204, 203);
     color: white;
@@ -441,22 +394,6 @@ width:35% ;
     margin-bottom: 10px;
     color: #333;
 }
-
-@media (max-width: 768px) {
-    .results-section {
-        flex-direction: column;
-    }
-
-    .chart-container,
-    .recommendation-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-
-
-
 
 .chat-icon {
     position: fixed;
@@ -566,4 +503,55 @@ width:35% ;
 #chatCloseButton{
     background-color: rgb(57,204,203);
     border: none;
+}
+
+@media (max-width: 600px) {
+    .results-section {
+        flex-direction: column;
+    }
+
+    .chart-container,
+    .recommendation-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .main-content {
+        margin: 10px; 
+    }
+    .dropdown-content {
+        left: 0; /* منو به سمت چپ صفحه قرار می‌گیرد */
+        right: auto; /* اطمینان از عدم نمایش در سمت راست */
+    }
+    .dropbtn {
+        width: 70px;
+    }
+    .job-list {
+        margin-bottom: 20px;
+        direction: rtl;
+        margin-bottom: 20px;
+        grid-template-columns: repeat(1, 1fr); /* یک باکس در هر خط در موبایل */
+       }
+       .job-card {
+        flex-direction: column; /* چیدمان عمودی در موبایل */
+        align-items: flex-start; /* تراز به سمت چپ */
+        margin: 20px;
+    }
+       .button-group {
+           flex-direction: row; /* چیدمان افقی دکمه‌ها در موبایل */
+           gap: 10px; /* فاصله بین دکمه‌ها */
+           margin-top: 10px; /* فاصله بالای دکمه‌ها */
+           justify-content: center; /* تراز به مرکز */
+       }
+    
+       .company-logo {
+           margin-bottom: 10px; /* فاصله زیر لوگو */
+       }
+       .tablinks {
+        margin-right: 0; 
+    }
+    .tabcontent{
+        margin-right: 0;
+    }
+    
+      
 }
